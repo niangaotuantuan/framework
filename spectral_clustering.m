@@ -2,9 +2,9 @@ function spectral_clustering()
 
 %load the weight matrix W 
 %different ways to construct W
-%-----
-%-----
-%-----
+%--N neighbors W---
+%--Gaussian W---
+%--Margin W---
 
 %to construct the D_ij & L matrix
 one_vec = ones(N,1);
