@@ -1,3 +1,10 @@
+############################################
+## function: return p-dimentional embedding
+## Author: Yanran Li
+## created on: June. 27th, 2015
+## Last modified: June. 28th, 2015
+############################################
+
 L  <- diag(rowSums(W)) - W # D-W, D is diagonal matrix
 l <- nrow(L)
 eigens <- NULL # eigenvectors
