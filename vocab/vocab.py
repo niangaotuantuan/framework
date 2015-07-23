@@ -1,8 +1,9 @@
 '''
 Vocabulary interface for embedding representation
-@tokenize
-@word2id, id@word
-
+@tokenize(text)
+@word2id, id2word(string)
+@random_ids(N)
+@__len__(self)
 }
 '''
 import numpy as np
