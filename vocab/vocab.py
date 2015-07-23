@@ -20,7 +20,7 @@ class Vocabulary:
     __slots__ = ["word2id", "id2word", "unknown", "word_occ"]
 
     def tokenize(text):
-    return [word for sentence in to_raw_text(text) for word in sentence]
+        return [word for sentence in to_raw_text(text) for word in sentence]
 
     def __init__(self, id2word = None):
         self.word2id = {}
