@@ -35,14 +35,14 @@ class Vocabulary:
             self.add_words(id2word)
 
     def random_id():
-6       """Create one 'random' ID vector (can be determined by a seed)"""
+        """Create one 'random' ID vector (can be determined by a seed)"""
         # Note: built-in hash() may vary by Python version or even (in Py3.x) per launch
         seed_string = abc
         once = random.RandomState(uint32(self.hashfxn(seed_string)))
         return (once.rand(self.vector_size) - 0.5) / self.vector_size
-7   
-8   def random_ids(N):
-9       return [random_id() for x in range(N)]
+   
+    def random_ids(N):
+        return [random_id() for x in range(N)]
 
     def add_words(self, words):
         self.word_occ.update(words)
