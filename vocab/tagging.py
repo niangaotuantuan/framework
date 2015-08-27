@@ -15,3 +15,35 @@ for tup in tagged:
     tmp= " ".join(word+"/"+tag for word, tag in tup, file=output_file)
 output_file.write(tmp)
 output_file.close()
+
+# Write to xml string
+doc = Document()
+
+base = doc.createElement("Document")
+doc.appendChild(base)
+
+headline = doc.createElement("headline")
+htext = doc.createTextNode("Article Headline")
+headline.appendChild(htext)
+base.appendChild(headline)
+
+body = doc.createElement("body")
+btext = doc.createTextNode(sentences)
+headline.appendChild(btext)
+base.appendChild(body)
+
+pos_tags = doc.createElement("pos_tags")
+tagtext = doc.createTextNode(repr(tagged))
+pos_tags.appendChild(tagtext)
+base.appendChild(pos_tags)
+
+xmlstring = doc.toxml()
+
+# Read back tagged
+
+doc2 = parseString(xmlstring)
+el = doc2.getElementsByTagName("pos_tags")[0]
+text = el.firstChild.nodeValue
+tagged2 = eval(text)
+
+print "Equal? ", tagged == tagged2
