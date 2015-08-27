@@ -12,7 +12,7 @@ f.close()
 output_file = open('output.txt', 'w')
 tmp=""
 for tup in tagged:
-    tmp= " ".join(word+"/"+tag for word, tag in tup, file=output_file)
+    tmp= " ".join(word+"/"+tag for word, tag in tup)
 output_file.write(tmp)
 output_file.close()
 
