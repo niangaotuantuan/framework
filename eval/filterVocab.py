@@ -1,6 +1,6 @@
 import sys
-
 #filter vocabulary for word sim evaluation
+#Need another evaluation dictionary
 d = {}
 for line in open(sys.argv[1], 'r'):
   d[line.strip()] = 0
