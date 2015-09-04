@@ -12,10 +12,14 @@ f.close()
 output_file = open('output.txt', 'w')
 tmp=""
 for tup in tagged:
-    tmp= " ".join(word+"/"+tag for word, tag in tup, file=output_file)
+    tmp= " ".join(word+"/"+tag for word, tag in tup)
 output_file.write(tmp)
 output_file.close()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 # Write to xml string
 doc = Document()
 
@@ -46,4 +50,8 @@ el = doc2.getElementsByTagName("pos_tags")[0]
 text = el.firstChild.nodeValue
 tagged2 = eval(text)
 
+<<<<<<< HEAD
 print "Equal? ", tagged == tagged2
+=======
+print "Equal? ", tagged == tagged2
+>>>>>>> origin/master
