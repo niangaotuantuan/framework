@@ -206,7 +206,7 @@ if __name__ == "__main__":
   for r, row in enumerate(X):
     X[r] /= math.sqrt((X[r]**2).sum() + 1e-6) 
   labels = numpy.loadtxt(sys.argv[2], dtype=str);
-  Y = tsne(X, 3, 80, 20.0);
+  Y = tsne(X, 3, 80, 20.0); #3D
   Plot.scatter(Y[:,0], Y[:,1], s=0.1)
   for label, x, y in zip(labels, Y[:, 0], Y[:, 1]):
         Plot.annotate(
